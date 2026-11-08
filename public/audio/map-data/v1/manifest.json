@@ -1,0 +1,7 @@
+{
+  "version": "v1",
+  "description": "Empty sample manifest. Add your own audio clips and city entries here.",
+  "audioBasePath": "/audio/map-data/v1",
+  "svgViewBox": "0 0 1400 800",
+  "cities": []
+}
