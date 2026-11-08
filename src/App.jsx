@@ -51,14 +51,39 @@ const C = {
 }
 
 const MEMOJI_FILES = [
-  'avatar-1.png', 'avatar-2.png', 'avatar-3.png', 'avatar-4.png', 'avatar-5.png', 'avatar-6.png', 'avatar-7.png', 'avatar-8.png',
+  '0063635ff4fa81bee10e1195c422ec3a-sticker 1.png',
+  '01891804d18a5099dd03141574be67c3-sticker 1.png',
+  '1.png','105_rectangle.png','107_rectangle.png','111_rectangle.png',
+  '12.png','12_rectangle.png','14.png',
+  '14d8c72494c6bddcce027449b51438d3-sticker 1.png','16.png',
+  '1fd0cd2627eb482fa6a374fa18d39f06-sticker 1.png',
+  '2d223f3b177606c5e863c50be70f9c86-sticker 1.png','33.png',
+  '3546b87e3056c378136201ccb29cbc04-sticker 1.png',
+  '394428831f98da33767a77ab6c60a6f9-sticker 1.png',
+  '3ccdf295dc30c4b50e7e973ae46fdc35-sticker 1.png',
+  '46f03b3aa1727bb0cb9d113f88f5511c-sticker 1.png',
+  '5319de986232bf2b2c87f1bbf7fbc69b-sticker 1.png',
+  '53a2765873424ff5ffdb2edbad4f489b-sticker 1.png',
+  '55ce5ce04933f69f67a23bebdfe44627-sticker 1.png','59_rectangle.png',
+  '64e1132a61bc221e550a41186a81b9ad-sticker 1.png','74_rectangle.png',
+  '754020afcf84d4cbaa88e65056285de2-sticker 1.png',
+  '948dd757fee522396e6cf9dbe70c9cf2-sticker 1.png',
+  '9788e7d57029acf5331f4127f21515c6-sticker 1.png','97_rectangle.png',
+  '9994a9107c7c2060534b01adf239d5d8-sticker 1.png',
+  'acc8592004e3750e611dea3419c67d52-sticker 1.png',
+  'b57b0bf5a8e8b2d4f3b536533d1e3f75-sticker 1.png',
+  'c87ecb919d329c7b2b3a43f896b223eb-sticker 1.png',
+  'cfcff37411665d2c7fa4db405835510c-sticker 1.png',
+  'da17180f857808d78fc4961d2079aec6-sticker 1.png',
+  'dd5ad9ae60dfe6a6a5821f2fa2ed4f2e-sticker 1.png',
+  'f82775abb8f97d077c3700584fdb4977-sticker 1.png',
 ]
 
 function getMemojiUrl(respondent) {
   let hash = 0
   const s = respondent?.sessionId || respondent?.id || ''
   for (let i = 0; i < s.length; i++) hash += s.charCodeAt(i)
-  return `/avatars/${encodeURIComponent(MEMOJI_FILES[hash % MEMOJI_FILES.length])}`
+  return `/Memojis/${encodeURIComponent(MEMOJI_FILES[hash % MEMOJI_FILES.length])}`
 }
 
 function MemojiAvatar({ respondent, size = 50, emotionColor }) {

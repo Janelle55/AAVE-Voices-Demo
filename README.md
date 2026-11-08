@@ -2,6 +2,8 @@
 
 > Public version of the interactive globe I built for the Elevate Black Voices research project at Howard University's Human-Centered AI Institute. The research data is confidential, so this version runs on made-up sample data.
 
+![The globe running on sample data](docs/screenshot.jpg)
+
 An interactive React data visualization that maps **AAVE (African American Vernacular English) interview voices** onto a 3D globe. Each respondent appears as a point placed by their U.S. location and colored by the emotion/sentiment of their response. You can browse by question, search individual voices, view stats and heatmaps, and play back location-based audio clips.
 
 The app is built with **React 19** and **Vite**, renders the globe with **globe.gl / three.js**, and loads its source data directly from an Excel workbook in the browser using **SheetJS (xlsx)**.
@@ -84,7 +86,7 @@ This public version runs on **made-up sample data** so you can see how the app w
 - **`public/sample-data.xlsx`** has 36 fake respondents with placeholder answers. The app reads the
   `p1 cleaned`, `p2 cleaned`, and `p3 cleaned` sheets and groups rows by `SessionID`
   into individual respondents (see [src/data/useRespondents.js](src/data/useRespondents.js)).
-- **`public/avatars/`** has simple placeholder avatars.
+- **`public/Memojis/`** has the memoji avatars shown for respondents.
 - **`public/audio/map-data/v1/manifest.json`** is an empty audio manifest. Location audio playback
   has no clips in this version.
 
@@ -102,7 +104,7 @@ AAVE-Voices/
 ├── vite.config.js              # Vite + React plugin config
 ├── public/
 │   ├── sample-data.xlsx        # Made-up sample dataset (loaded at runtime)
-│   ├── avatars/                # Placeholder avatar images
+│   ├── Memojis/                # Memoji avatar images
 │   └── audio/                  # Audio manifest (empty in this version)
 ├── src/
 │   ├── main.jsx                # React entry point
